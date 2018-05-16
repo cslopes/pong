@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+cloud:
+  aws:
+    credentials:
+      accessKey:
+      secretKey:
+      instanceProfile: true
+    region:
+      static:
+    stack:
+      auto: false
+
+sqs:
+  producer:
+    queue:
+      name: pong
+    batch:
+      max: 10
+  consumer:
+    queue:
+      name: ping
